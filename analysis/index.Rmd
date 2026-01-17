@@ -14,7 +14,7 @@ Oleksandra Simeonidi - Informatyka i Inżynieria Danych
 
 Jestem studenką studiów stacjonarnych na UPP - niżej można zobaczyć obrazek głównego budynku:
 
-![CMAX](images/budynek-wtd-01.jpg){width="520"}
+<img src="../budynek-wtd.jpg"/>
 
 ### Informacja o projekcie
 
