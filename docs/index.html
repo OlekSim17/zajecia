@@ -284,7 +284,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -295,8 +295,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -309,9 +309,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>R/</code> <span
@@ -334,36 +334,33 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomOlekSim17ProjektRtreeee5547970e8c81912a6e9a19d2a56f703bdd2fc2targetblankee55479a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomOlekSim17ProjektRtree2858fc37221ca645f1ddc2f6896932e99a5c88fftargetblank2858fc3a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/OlekSim17/Projekt-R/tree/ee5547970e8c81912a6e9a19d2a56f703bdd2fc2" target="_blank">ee55479</a>
+<a href="https://github.com/OlekSim17/Projekt-R/tree/2858fc37221ca645f1ddc2f6896932e99a5c88ff" target="_blank">2858fc3</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomOlekSim17ProjektRtreeee5547970e8c81912a6e9a19d2a56f703bdd2fc2targetblankee55479a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomOlekSim17ProjektRtree2858fc37221ca645f1ddc2f6896932e99a5c88fftargetblank2858fc3a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -373,7 +370,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/OlekSim17/Projekt-R/tree/ee5547970e8c81912a6e9a19d2a56f703bdd2fc2" target="_blank">ee55479</a>.
+<a href="https://github.com/OlekSim17/Projekt-R/tree/2858fc37221ca645f1ddc2f6896932e99a5c88ff" target="_blank">2858fc3</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -395,11 +392,6 @@ Untracked files:
     Untracked:  analysis/images/budynek-wtd-02.jpg
     Untracked:  analysis/images/budynek-wtd-03.jpg
     Untracked:  analysis/images/budynek-wtd-04.jpg
-
-Unstaged changes:
-    Modified:   analysis/about.Rmd
-    Modified:   analysis/ad.Rmd
-    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -443,6 +435,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/OlekSim17/Projekt-R/blob/2858fc37221ca645f1ddc2f6896932e99a5c88ff/analysis/index.Rmd" target="_blank">2858fc3</a>
+</td>
+<td>
+OlekSim17
+</td>
+<td>
+2026-01-18
+</td>
+<td>
+Proba updatu
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/OlekSim17/Projekt-R/2858fc37221ca645f1ddc2f6896932e99a5c88ff/docs/index.html" target="_blank">2858fc3</a>
+</td>
+<td>
+OlekSim17
+</td>
+<td>
+2026-01-18
+</td>
+<td>
+Proba updatu
+</td>
+</tr>
 <tr>
 <td>
 Rmd
