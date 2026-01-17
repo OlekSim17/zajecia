@@ -1,10 +1,67 @@
 ---
-title: "About"
+title: "CV"
 output:
   workflowr::wflow_html:
     toc: false
 editor_options:
   chunk_output_type: console
+  markdown: 
+    wrap: 72
 ---
 
-Describe your project.
+## Dane podstawowe
+
+**Oleksandra Simeonidi**
+
+Adres: Warszawa, 60-618 Polska
+
+Telefon: +48123123123
+
+Data urodzenia: 11/11/2000
+
+Email: example@gmail.com
+
+## Wykształcenie
+
+**Uniwersytet w Poznaniu**
+
+Studia inżynierskie IIID,
+Przewidywany koniec studiów, 02/2027
+
+**Liceum Fizyczno-Techniczne**
+
+Dyplom ukończenia szkoły średniej Klasa z
+zaawansowaną matematyką i informatyką, 05/2023
+
+## Umiejętności
+
+-    Możliwość swobodnie wypowiadać się w 3 różnych językach
+
+-   Doświadczenie w obsłudze klienta
+
+-   Obsługa urządzeń biurowych, umiejętności informatyczne
+
+-   Umiejętność udzielania pierwszej pomocy
+
+-    Zdolność przystosowania się do nowego środowiska.
+
+## Doświadczenie
+
+**Korepetytor \| 10/2023 - 12/2023**
+
+Prowadziłam indywidualne zajęcia językowe, koncentrując się na
+zaawansowanej gramatyce, stylistyce oraz niuansach języka polskiego i
+angielskiego.
+
+**Wolontariusz \| 02/2024**
+
+Zajmowałam się obsługą gości, udzielałam pomoc w punkcie informacyjnym.
+Udzielałam pomoc w organizacji i planowaniu wydarzeń, pozytywnie
+reprezentowałam organizację podczas świadczenia usług.
+
+**Rejestratorka \| 06/2024**
+
+Obsługiwałam i udzielałam informacje gościom w punkcie rejestracji.
+Zajmowałam się sprzedażą i skanowaniem biletów, a także wykonywałam rolę
+punktu informacyjnego. Wykorzystywałam swoją wiedzę informatyczną
+podczas pracy przy komputerze.

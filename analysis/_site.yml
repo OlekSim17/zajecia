@@ -1,14 +1,16 @@
 name: "Projekt2"
 output_dir: ../docs
 navbar:
-  title: "Projekt2"
+  title: "Projekt"
   left:
   - text: Home
     href: index.html
-  - text: About
+  - text: CV
     href: about.html
-  - text: License
-    href: license.html
+  - text: Analiza Danych
+    href: ad.html
+  - text: Prezentacja
+    href: PresentationR.html
 output:
   workflowr::wflow_html:
     toc: yes

@@ -1,0 +1,106 @@
+---
+title: "PresentationR"
+author: "Oleksandra Simeonidi"
+format: 
+  revealjs:
+    footer: Oleksandra Simeonidi IIID 3
+    transition: fade
+editor: visual
+---
+
+# Moje zainteresowania
+
+Hobby wypełniają wolny czas wartościowo, dają radość i pomagają oderwać się od codziennych obowiązków. Rozwijają też nowe umiejętności i mogą prowadzić do ciekawych znajomości. Nie mam duzo hobby, ale te które mam bardzo lubie.
+
+# Czas który spędzam na moje hobby
+
+```{r}
+library(ggplot2)
+dane <- data.frame(
+  aktywnosc = c("Studia", "Gry komputerowe", "Słuchanie muzyki", "Gra na gitarze", "Koreański"),
+  godziny = c(40, 15, 10, 8, 5)
+)
+
+ggplot(dane, aes(x = aktywnosc, y = godziny)) +
+  geom_col(fill = c("#FFB6C1", "#B5EAD7", "#C7CEEA", "#FFDAC1", "#E2F0CB")) +
+  labs(title = "Podział czasu w tygodniu",
+       x = "Aktywność",
+       y = "Liczba godzin") +
+  theme_minimal()
+```
+
+# Gry komputerowe
+
+Uwielbiam w wolnym czasie grac w różne gry.
+
+```{r}
+library("ggplot2")
+gry <- data.frame(
+  gra = c("League of Legends", "RDR2", "Cyberpunk", "Inne gry"),
+  godz = c(20, 5, 10, 15),  
+  kolor = c("#FFB6C1", "#B5EAD7", "#C7CEEA", "#FFDAC1")
+)
+
+ggplot(gry, aes(x = gra, y = godz, fill = kolor)) +
+  geom_col() +
+  scale_fill_identity() +
+  labs(title = "czas spedzony na grach w tygodniu",
+       x = "gra",
+       y = "godziny") +
+  theme_minimal()
+
+```
+
+## It takes two
+
+::::: columns
+::: {.column width="50%"}
+![It takes 2](images/it2-01.jpg)
+:::
+
+::: {.column width="50%"}
+It Takes Two is a 2021 cooperative action game developed by Hazelight Studios and published by Electronic Arts.
+:::
+:::::
+
+## League of Legends
+
+:::::: columns
+:::: {.column width="50%"}
+::: callout-warning
+Uwaga! Gra wyzywa uzależnienie!
+:::
+::::
+
+::: {.column width="50%"}
+![LOL](images/lol.jpg)
+:::
+::::::
+
+# Gra na gitarze
+
+Gitara to jeden z najpopularniejszych i najbardziej rozpowszechnionych instrumentów na świecie. Gra na gitarze może pomóc Ci się zrelaksować i uwolnić od stresu dnia codziennego . W miarę postępów w nauce gry na gitarze rozwiniesz umiejętność precyzyjnego wyrażania i uwalniania emocji poprzez grę, co może mieć bardzo terapeutyczne działanie.
+
+![Gitara](images/guitar.jpg){fig-alt="Gitara" fig-align="center"}
+
+# Uczenie się języków
+
+Uważam że nauka języków obcych jest ważna dla rozwinięcia umiejętności intelektualnych. Dlatego cotydzień staram się poświęcać 2-3 godziny na nauke.
+
+```{r}
+library(ggplot2)
+
+dane <- data.frame(
+  miesiac = c(1,2,3,4,5,6,7,8,9),
+  poziom = c(1, 1.3, 2.8, 3, 4, 4.6, 7, 8, 9)
+)
+
+ggplot(dane, aes(x = miesiac, y = poziom, group = 1)) +
+  geom_line(color = "#FFB6C1", size = 1.5) +
+  geom_point(color = "#FFB6C1", size = 3) +
+  labs(title = "Mój postęp w nauce koreańskiego",
+       x = "Miesiąc",
+       y = "Poziom (1-10)") +
+  ylim(0, 10) +
+  theme_minimal()
+```

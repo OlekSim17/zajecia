@@ -8,4 +8,14 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+### Troche o mnie
+
+Oleksandra Simeonidi - Informatyka i Inżynieria Danych
+
+Jestem studenką studiów stacjonarnych na UPP - niżej można zobaczyć obrazek głównego budynku:
+
+![CMAX](images/budynek-wtd-01.jpg){width="520"}
+
+### Informacja o projekcie
+
+Strona została wykonana wykorzystując technologie **workflowr**.

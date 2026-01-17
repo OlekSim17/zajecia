@@ -1,0 +1,86 @@
+---
+title: "Analiza Danych"
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+Co przedstawia : Zbiór quakes zawiera 1000 trzęsień ziemi zarejestrowanych w rejonie Fidżi (1964).
+Źródło: National Earthquake Information Center (NEIC) USA
+
+**Zmienne:**
+
+lat, long - współrzędne
+
+depth - głębokość (km)
+
+mag - magnituda (skala Richtera)
+
+stations - liczba stacji sejsmicznych
+
+```{r, include=FALSE}
+library(ggplot2)
+library(dplyr)
+
+data("quakes")
+```
+
+
+```{r }
+nowe <- quakes %>%
+  mutate(
+    intensywnosc = mag * stations / 100
+  ) %>%
+  filter(intensywnosc > 4.5) %>%
+  group_by(intensywnosc) %>%
+  summarise(
+    srednia_magnituda = mean(mag),
+    srednia_glebokosc = mean(depth),
+    max_magnituda = max(mag),
+    max_glebokosc = max(depth),
+    min_magnituda = min(mag),
+    min_glebokosc = min(depth)
+  ) %>% 
+  head(20)
+
+print(nowe)
+```
+
+## Wykres słupkowy
+
+```{r}
+ggplot(quakes, aes(x = cut(stations, breaks = 8))) +
+  geom_bar(fill = "pink", color = "black") +
+  labs(title = "Liczba trzesień ziemi według ilosci stancji",
+       x = "Liczba stacji",
+       y = "Liczba trzesień") +
+  theme_minimal()
+```
+Wykres słupkowy liczby trzesień ziemi według ilosci stancji pokazuje, że im mniej stacji tym więcej trzęsięń
+## Histogram magnitud
+
+```{r}
+ggplot(quakes, aes(x = mag)) +
+  geom_histogram(binwidth = 0.1, fill = "lightgreen", color = "black") +
+  labs(title = "Histogram magnitud trzesień ziemi",
+       x = "Magnituda",
+       y = "Liczba trzesień") +
+  theme_minimal()
+```
+
+Histogram magnitud trzesień ziemi pokazuje, że najwięcej trzęsień występuje pomiędzy 4.3 a 4.7 magnitudą.
+
+##  Wykres liniowy 
+
+```{r}
+ggplot(quakes, aes(x = depth, y = mag)) +
+  geom_point(alpha = 0.8, color = "lightblue") +
+  geom_smooth(method = "lm", se = FALSE, color = "darkred") +
+  labs(title = "Głebokość vs magnituda",
+       x = "Głebokość",
+       y = "Magnituda") +
+  theme_minimal()
+```
+Wykres liniowy zależności magnitudy od głębokości pokazuję, że z zwiększeniem głębokości magnituda maleje
